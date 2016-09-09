@@ -1,0 +1,9 @@
+ Progress: Alle Unit-Dateien gefunden
+ : 
+ : *** Converting unit files belonging to project/package ***
+Unit1.pas Note: Unit "Windows" mit "LCLIntf, LCLType, LMessages" im uses Abschnitt ersetzt.
+ : 
+ : *** Repariere Formulardateien ... ***
+Unit1.pas Note: Eigenschaft "TextHeight" entfernt.
+Unit1.pas Note: Eigenschaft "OldCreateOrder" entfernt.
+ : Conversion Ready.
