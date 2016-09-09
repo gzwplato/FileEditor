@@ -1,0 +1,61 @@
+object FormAboutBox: TFormAboutBox
+  Left = 346
+  Height = 143
+  Top = 163
+  Width = 369
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'About...'
+  ClientHeight = 143
+  ClientWidth = 369
+  Position = poDesktopCenter
+  LCLVersion = '5.7'
+  object Label1: TLabel
+    Left = 8
+    Height = 72
+    Top = 8
+    Width = 360
+    AutoSize = False
+    Caption = 'File Editor'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -59
+    Font.Name = 'Algerian'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentBidiMode = False
+    ParentColor = False
+    ParentFont = False
+    WordWrap = True
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 25
+    Top = 80
+    Width = 165
+    Caption = 'for large text files'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -19
+    Font.Name = 'Arial Unicode MS'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 24
+    Height = 18
+    Top = 120
+    Width = 320
+    Caption = 'Copyright (C) René Hickersberger'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Courier New'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+end

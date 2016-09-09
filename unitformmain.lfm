@@ -1,0 +1,178 @@
+object FormMain: TFormMain
+  Left = 594
+  Height = 530
+  Top = 181
+  Width = 900
+  HelpType = htKeyword
+  Caption = 'Editor'
+  ClientHeight = 510
+  ClientWidth = 900
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Menu = MainMenu1
+  OnCloseQuery = FormCloseQuery
+  OnKeyDown = FormKeyDown
+  OnResize = FormResize
+  Position = poDefault
+  LCLVersion = '5.7'
+  WindowState = wsMaximized
+  object PanelMain: TPanel
+    Left = 0
+    Height = 510
+    Top = 0
+    Width = 900
+    Align = alClient
+    ClientHeight = 510
+    ClientWidth = 900
+    TabOrder = 0
+    object PanelRightSideBar: TPanel
+      Left = 848
+      Height = 508
+      Top = 1
+      Width = 51
+      Align = alRight
+      ClientHeight = 508
+      ClientWidth = 51
+      TabOrder = 0
+      object LabelLCT: TLabel
+        Left = 1
+        Height = 13
+        Top = 8
+        Width = 20
+        Align = alCustom
+        Anchors = [akTop, akRight]
+        Caption = 'LCT'
+        ParentColor = False
+      end
+      object ButtonUp: TButton
+        Left = 24
+        Height = 24
+        Top = 0
+        Width = 27
+        Anchors = [akTop, akRight]
+        Caption = '^'
+        OnClick = ButtonUpClick
+        TabOrder = 0
+      end
+      object ButtonDown: TButton
+        Left = 24
+        Height = 23
+        Top = 482
+        Width = 27
+        Anchors = [akRight, akBottom]
+        Caption = 'v'
+        OnClick = ButtonDownClick
+        TabOrder = 1
+      end
+      object LabelCursorPos: TLabel
+        Left = 1
+        Height = 13
+        Top = 24
+        Width = 41
+        Caption = 'X: 0 Y: 0'
+        ParentColor = False
+      end
+    end
+    object PanelText: TPanel
+      Left = 25
+      Height = 508
+      Top = 1
+      Width = 823
+      Align = alClient
+      TabOrder = 2
+      OnPaint = PanelTextPaint
+    end
+    object PanelLineNumber: TPanel
+      Left = 1
+      Height = 508
+      Top = 1
+      Width = 24
+      Align = alLeft
+      TabOrder = 1
+      OnPaint = PanelLineNumberPaint
+    end
+  end
+  object MainMenu1: TMainMenu
+    left = 48
+    top = 24
+    object MenuItemFile: TMenuItem
+      Caption = '&File'
+      object MenuItemNew: TMenuItem
+        Caption = '&New'
+        ShortCut = 16462
+        OnClick = MenuItemNewClick
+      end
+      object MenuItem3: TMenuItem
+        Caption = '-'
+      end
+      object MenuItemOpen: TMenuItem
+        Caption = '&Open...'
+        ShortCut = 16463
+        OnClick = MenuItemOpenClick
+      end
+      object MenuItem1: TMenuItem
+        Caption = '-'
+      end
+      object MenuItemSave: TMenuItem
+        Caption = '&Save'
+        ShortCut = 16467
+      end
+      object MenuItemSaveAs: TMenuItem
+        Caption = 'Save &as...'
+      end
+      object MenuItem2: TMenuItem
+        Caption = '-'
+      end
+      object MenuItemExit: TMenuItem
+        Caption = 'E&xit'
+        ShortCut = 32883
+        OnClick = MenuItemExitClick
+      end
+    end
+    object MenuItemEdit: TMenuItem
+      Caption = '&Edit'
+    end
+    object MenuItemFormat: TMenuItem
+      Caption = 'F&ormat'
+      object MenuItemFont: TMenuItem
+        Caption = 'F&ont...'
+        OnClick = MenuItemFontClick
+      end
+    end
+    object MenuItemView: TMenuItem
+      Caption = '&View'
+    end
+    object MenuItemHelp: TMenuItem
+      Caption = '?'
+      object MenuItemShowHelp: TMenuItem
+        Caption = 'Show &Help'
+        ShortCut = 112
+      end
+      object MenuItemAbout: TMenuItem
+        Caption = '&About'
+        OnClick = MenuItemAboutClick
+      end
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Title = 'Open existing file'
+    Filter = 'All Files (*.*)|*.*|Text Documents (*.txt)|*.txt'
+    left = 128
+    top = 24
+  end
+  object FontDialog1: TFontDialog
+    Title = 'Select font'
+    MinFontSize = 0
+    MaxFontSize = 0
+    left = 213
+    top = 24
+  end
+  object TimerCursor: TTimer
+    Interval = 300
+    OnTimer = TimerCursorTimer
+    left = 296
+    top = 24
+  end
+end
