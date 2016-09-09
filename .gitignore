@@ -67,7 +67,7 @@ __recovery/
 
 
 
-
+*.ppu
 *.tpu
 *.compiled
 *.dbg
